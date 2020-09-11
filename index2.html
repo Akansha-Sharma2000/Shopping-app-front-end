@@ -1,0 +1,743 @@
+<!--Icons are taken from font-awesome and icons8.com-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery-web</title>
+
+    <!--Bootstrap 4.5.2 css link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!--Stylesheet link-->
+    <link rel="stylesheet" href="styles2.css">
+
+    <!--Font-awesome script-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!--app.js script-->
+    <script src="app.js"></script>
+
+    <!--Bootstrap 4.5.2 js scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    <body>
+   
+      <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a name="top" class="navbar-brand dec1" href="#"><i class="fas fa-th-large dec1"></i>  grocery web ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">home page <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--PopUp-->
+
+      <div id="popUp" onload="openPopUp()">
+        <h1 class="popUpHeading">New Offer</h1>
+        <i onclick="closePopUp()" class="fas fa-times-circle fa-4x"></i>
+        <div class="dec25 offer">
+          <div class="top-left change"></div>
+          <div class="top-right">$20</div>
+          <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+          <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+          <div class="dec26">
+            <input type='button' value='-' class='qtyminus' onclick="decrease()" />
+            <input type='number' class='qty'  value='0'/>
+            <input type='button' value='+' class='qtyplus' onclick="increase()"/>
+          </div>
+          <img class="dec18" src="images/tomato.jpg" alt="tomato">
+          <div class="dec19">
+            <h2 class="heading5">TOMATO</h2>
+           <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+            <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+            </div>
+        </div>
+
+        <div class="dec25 offer">
+          <div class="top-left change"></div>
+          <div class="top-right">$20</div>
+          <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+          <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+          <div class="dec26">
+            <input type='button' value='-' class='qtyminus' onclick="decrease1()" />
+            <input type='number' class='qty'  value='0'/>
+            <input type='button' value='+' class='qtyplus' onclick="increase1()"/>
+          </div>
+          <img class="dec18" src="images/honey.jpg" alt="honey">
+          <div class="dec19">
+            <h2 class="heading5">HONEY</h2>
+           <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+            <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+            </div>
+        </div>
+
+        <div class="dec25 offer">
+          <div class="top-left change"></div>
+          <div class="top-right">$20</div>
+          <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+          <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+          <div class="dec26">
+            <input type='button' value='-' class='qtyminus' onclick="decrease2()" />
+            <input type='number' class='qty' value='0'/>
+            <input type='button' value='+' class='qtyplus' onclick="increase2()"/>
+          </div>
+          <img class="dec18" src="images/potato.jpg" alt="potato">
+          <div class="dec19">
+            <h2 class="heading5">POTATO</h2>
+           <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+            <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+            </div>
+        </div>
+
+        <div class="dec25 middle1 offer">
+          <div class="top-left change"></div>
+          <div class="top-right">$20</div>
+          <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+          <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+          <div class="dec26">
+            <input type='button' value='-' class='qtyminus' onclick="decrease3()" />
+            <input type='number' class='qty' value='0'/>
+            <input type='button' value='+' class='qtyplus' onclick="increase3()"/>
+          </div>
+          <img class="dec18" src="images/apple.jpeg" alt="apple">
+          <div class="dec19">
+            <h2 class="heading5">APPLE</h2>
+           <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+            <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+            </div>
+        </div>
+
+        <div class="dec25 middle2 offer">
+          <div class="top-left change"></div>
+          <div class="top-right">$20</div>
+          <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+          <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+          <div class="dec26">
+            <input type='button' value='-' class='qtyminus' onclick="decrease4()" />
+            <input type='number' class='qty' value='0'/>
+            <input type='button' value='+' class='qtyplus' onclick="increase4()"/>
+          </div>
+          <img class="dec18" src="images/mango.jpg" alt="mango">
+          <div class="dec19">
+            <h2 class="heading5">MANGO</h2>
+           <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+            <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+            </div>
+        </div>
+
+      </div>
+
+
+      <div class="complete">
+
+      <div class="full">
+        <!--First para-->
+
+        <div class="dec2">
+            <p class="dec3"><i class="fas fa-envelope"></i> ABC@gmail.com</p>
+            <p class="dec3"><i class="fa fa-phone"></i> +987654321</p>
+            <p class="dec3"><i class="fa fa-truck"></i> free shipping with love and care</p>
+
+            <div class="dec4">
+                <p class="dec5 heading"><img class="carrot" src="images/carrot.jpg">Grocery</p>
+                <img class="dec5 dec6" src="images/Search-bar-3.png" alt="search-bar">
+                <i class="fas fa-user dec5 dec7"></i>
+                <i class="fas fa-heart dec5 dec7 heart1"></i>
+               <a href="cart.html" target="_self"><i class="fas fa-shopping-cart dec5 dec7 mainCart"></i></a> 
+            </div>
+
+            <div class="dec8">
+            <div class="dec9">
+              <img src="https://img.icons8.com/color/48/000000/group-of-fruits.png"/>
+                <div class="text">Fruits</div>
+            </div>
+            <div class="dec9">
+              <img src="https://img.icons8.com/color/48/000000/thanksgiving.png"/>
+                <div class="text">Meat</div>
+            </div>
+            <div class="dec9">
+              <img src="https://img.icons8.com/color/48/000000/wedding-gift.png"/>
+                <div class="text">Gifts</div>
+            </div>
+            <div class="dec9">
+              <img src="https://img.icons8.com/color/48/000000/family.png"/>
+                <div class="text">Health</div>
+            </div>
+            <div class="dec9">
+              <img src="https://img.icons8.com/color/48/000000/dog.png"/>
+                <div class="text">Pet Food</div>
+            </div>
+            </div>
+        </div>
+      </div>
+
+ <!--Second para-->     
+
+    <div class="dec10">
+
+       <img class="dec11" src="images/cleaning-products.jpg" alt="cleaning-products">
+       <img class="dec12" src="images/mask-2.jpg" alt="mask">
+
+      <h1 class="heading2">STAY SAFE AND PROTECTED</h1>
+      <h2 class="heading3">Keep the germs off</h2>
+      <div>
+      <button class="dec13">Shop Now  <i class="fas fa-play"></i></button>
+     </div>
+
+
+ <!--Fig-images--> 
+
+     <div class="figimage">
+      <div class="dec14">
+        <img class="dec15" src="images/hands.png" alt="hands">
+        <figcaption>When hands are visibly dirty</figcaption>
+      </div>
+
+      <div class="dec14">
+        <img class="dec15" src="images/cough.jpg" alt="person">
+        <figcaption>After coughing or sneezing</figcaption>
+      </div>
+
+      <div class="dec14">
+        <img class="dec15" src="images/soup.jpg" alt="soup">
+        <figcaption>Before eating</figcaption>
+      </div>
+    </div>
+
+   </div>
+
+   <!--Third para-->
+
+   <!--Frequently buy-->
+
+   <h1 class="heading4">FREQUENTLY BUY</h1>
+
+   <div class="dec16">
+  
+    <div class="dec17">
+      <div class="top-left">OFFER</div>
+      <div class="top-right">$20</div>
+      <div class="bottom-right">ADD TO CART   <i class="fas fa-shopping-cart fa-lg cart1"></i></div>
+      <div class="bottom-left">
+        <input type='button' value='-' class='qtyminus' onclick="decrease5()" />
+        <input type='number' class='qty' value='0'/>
+        <input type='button' value='+' class='qtyplus' onclick="increase5()"/>
+      </div>
+      <img class="dec18" src="images/potato.jpg" alt="potatoes">
+      <div class="dec19">
+        <h2 class="heading5">POTATO</h2>
+       <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+        <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+        </div>
+    </div>
+
+    <div class="dec17">
+      <div class="top-left">OFFER</div>
+      <div class="top-right">$20</div>
+      <div class="bottom-right">ADD TO CART   <i class="fas fa-shopping-cart fa-lg cart1"></i></div>
+      <div class="bottom-left">
+        <input type='button' value='-' class='qtyminus' onclick="decrease6()" />
+        <input type='number' class='qty' value='0'/>
+        <input type='button' value='+' class='qtyplus' onclick="increase6()"/>
+      </div>
+      <img class="dec18" src="images/tomato.jpg" alt="tomatoes">
+      <div class="dec19">
+      <h2 class="heading5">TOMATO</h2>
+      <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+    </div>
+
+    <div class="dec17">
+      <div class="top-left">OFFER</div>
+      <div class="top-right">$20</div>
+      <div class="bottom-right">ADD TO CART   <i class="fas fa-shopping-cart fa-lg cart1"></i></div>
+      <div class="bottom-left">
+        <input type='button' value='-' class='qtyminus' onclick="decrease7()" />
+        <input type='number' class='qty' value='0'/>
+        <input type='button' value='+' class='qtyplus' onclick="increase7()"/>
+      </div>
+      <img class="dec18" src="images/corn.webp" alt="corn">
+      <div class="dec19">
+      <h2 class="heading5">CORN</h2>
+      <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+    </div>
+
+    <div class="dec17">
+      <div class="top-left">OFFER</div>
+      <div class="top-right">$20</div>
+      <div class="bottom-right">ADD TO CART   <i class="fas fa-shopping-cart fa-lg cart1"></i></div>
+      <div class="bottom-left">
+        <input type='button' value='-' class='qtyminus' onclick="decrease8()" />
+        <input type='number' class='qty' value='0'/>
+        <input type='button' value='+' class='qtyplus' onclick="increase8()"/>
+      </div>
+      <img class="dec18" src="images/cucumber.jpg" alt="cucumber">
+      <div class="dec19">
+      <h2 class="heading5">CUCUMBER</h2>
+      <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+    </div>
+
+    <div class="dec17">
+      <div class="top-left">OFFER</div>
+      <div class="top-right">$20</div>
+      <div class="bottom-right">ADD TO CART   <i class="fas fa-shopping-cart fa-lg cart1"></i></div>
+      <div class="bottom-left">
+        <input type='button' value='-' class='qtyminus' onclick="decrease9()" />
+        <input type='number' class='qty' value='0'/>
+        <input type='button' value='+' class='qtyplus' onclick="increase9()"/>
+      </div>
+      <img class="dec18" src="images/pumbkin.jpg" alt="pumbkin">
+      <div class="dec19">
+      <h2 class="heading5">PUMBKIN</h2>
+      <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+    </div>
+
+    <div class="dec17">
+      <div class="top-left">OFFER</div>
+      <div class="top-right">$20</div>
+      <div class="bottom-right">ADD TO CART   <i class="fas fa-shopping-cart fa-lg cart1"></i></div>
+      <div class="bottom-left">
+        <input type='button' value='-' class='qtyminus' onclick="decrease10()" />
+        <input type='number' class='qty' value='0'/>
+        <input type='button' value='+' class='qtyplus' onclick="increase10()"/>
+      </div>
+      <img class="dec18" src="images/okra.webp" alt="okra">
+      <div class="dec19">
+      <h2 class="heading5">OKRA</h2>
+      <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+    </div>
+
+   </div>
+
+   <!--Fourth para-->
+
+   <div class="dec20">
+    <img class="dec21" src="images/immunity2.jpg" alt="immunity">
+     <h5 class="heading7">Nature's basket</h5>
+     <img class="muscle" src="https://img.icons8.com/color/96/000000/weightlift.png"/>
+     <h1 class="heading8 common">STAY STRONG,<br>STAY HEALTHY</h1>
+     <h2 class="heading9">with our immunity power packs!</h2>
+     <button class="dec22">SHOP NOW</button>
+   </div>
+
+   <div class="dec24">
+
+   <!--My smart basket-->
+
+   <!--Fifth para-->
+
+   <h1 class="heading10">MY SMART BASKET</h1>
+
+   
+   <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease11()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase11()"/>
+    </div>
+    <img class="dec18" src="images/potato.jpg" alt="potatoes">
+    <div class="dec19">
+      <h2 class="heading5">POTATO</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease12()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase12()"/>
+    </div>
+    <img class="dec18" src="images/tomato.jpg" alt="tomatoes">
+    <div class="dec19">
+      <h2 class="heading5">TOMATO</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease13()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase13()"/>
+    </div>
+    <img class="dec18" src="images/apple.jpeg" alt="apples">
+    <div class="dec19">
+      <h2 class="heading5">APPLE</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25 middle1">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease14()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase14()"/>
+    </div>
+    <img class="dec18" src="images/mango.jpg" alt="mangoes">
+    <div class="dec19">
+      <h2 class="heading5">MANGO</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25 middle2">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease15()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase15()"/>
+    </div>
+    <img class="dec18" src="images/orange.jpg" alt="oranges">
+    <div class="dec19">
+      <h2 class="heading5">ORANGE</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease16()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase16()"/>
+    </div>
+    <img class="dec18" src="images/potato-chips.jpg" alt="lays">
+    <div class="dec19">
+      <h2 class="heading5">LAYS</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease17()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase17()"/>
+    </div>
+    <img class="dec18" src="images/cookie.jpeg" alt="biscuits">
+    <div class="dec19">
+      <h2 class="heading5">BISCUIT</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease18()" />
+      <input type='number' class='qty'value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase18()"/>
+    </div>
+    <img class="dec18" src="images/honey.jpg" alt="honey">
+    <div class="dec19">
+      <h2 class="heading5">HONEY</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+ </div>
+
+ <!--Sixth para-->
+
+ <div class="dec28">
+   <img class="dec29" src="images/green-veggi.jpg" alt="green-veggies">
+   <h2 class="heading11">WIDEST RANGE OF</h2>
+   <h1 class="heading12">100% Natural & <br>Organic</h1>
+   <h2 class="heading13">PRODUCE</h2>
+   <button class="dec30">SHOP NOW</button>
+ </div>
+
+ <!--Shop by brand-->
+
+ <!--Seventh para-->
+
+ <h1 class="heading14">SHOP BY BRAND</h1>
+
+ <div class="dec31">
+   <img class="dec32" src="images/lux.webp" alt="lux logo">
+   <img class="dec32" src="images/britania.jpg" alt="britania logo">
+   <img class="dec32" src="images/dabur.jpg" alt="dabur logo">
+   <img class="dec32" src="images/amul.png" alt="amul logo">
+   <img class="dec32" src="images/maggie.jpg" alt="maggie logo">
+   <img class="dec32" src="images/parle.svg" alt="parle logo">
+   <img class="dec32" src="images/colgate.jpg" alt="colgate logo">
+   <img class="dec32" src="images/dove.jpg" alt="dove logo">
+ </div>
+
+ <div class="dec33">
+   <img class="dec34" src="images/detergent.webp" alt="washing products">
+   <h1 class="heading15"><i class="fas fa-caret-left fa"></i> FOR YOUR DAILY <i class="fas fa-caret-right fa"></i><br> CLEANING ROUTINE </h1> 
+   <h2 class="heading16"><span class="side">|</span> UP TO 35% OFF <span class="side">|</span></h2>
+ </div>
+
+ <!--Top selected items-->
+
+ <!--Eighth para-->
+
+ <div class="dec35">
+  <h1 class="heading17">TOP SELECTED ITEMS</h1>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease19()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase19()"/>
+    </div>
+    <img class="dec18" src="images/potato.jpg" alt="potatoes">
+    <div class="dec19">
+      <h2 class="heading5">POTATO</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease20()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase20()"/>
+    </div>
+    <img class="dec18" src="images/tomato.jpg" alt="tomatoes">
+    <div class="dec19">
+      <h2 class="heading5">TOMATO</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease21()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase21()"/>
+    </div>
+    <img class="dec18" src="images/apple.jpeg" alt="apples">
+    <div class="dec19">
+      <h2 class="heading5">APPLE</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease22()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase22()"/>
+    </div>
+    <img class="dec18" src="images/mango.jpg" alt="mangoes">
+    <div class="dec19">
+      <h2 class="heading5">MANGO</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease23()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase23()"/>
+    </div>
+    <img class="dec18" src="images/orange.jpg" alt="oranges">
+    <div class="dec19">
+      <h2 class="heading5">ORANGE</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease24()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase24()"/>
+    </div>
+    <img class="dec18" src="images/banana.jpg" alt="lays">
+    <div class="dec19">
+      <h2 class="heading5">BANANA</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease25()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase25()"/>
+    </div>
+    <img class="dec18" src="images/potato-chips.jpg" alt="biscuits">
+    <div class="dec19">
+      <h2 class="heading5">LAYS</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease26()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase26()"/>
+    </div>
+    <img class="dec18" src="images/cookie.jpeg" alt="honey">
+    <div class="dec19">
+      <h2 class="heading5">BISCUIT</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+  <div class="dec25">
+    <div class="top-left">OFFER</div>
+    <div class="top-right">$20</div>
+    <div class="heart"><i class="fas fa-heart fa-2x"></i></div>
+    <div class="cart"><i class="fas fa-shopping-cart fa-2x cart1"></i></div>
+    <div class="dec26">
+      <input type='button' value='-' class='qtyminus' onclick="decrease27()" />
+      <input type='number' class='qty' value='0'/>
+      <input type='button' value='+' class='qtyplus' onclick="increase27()"/>
+    </div>
+    <img class="dec18" src="images/honey.jpg" alt="honey">
+    <div class="dec19">
+      <h2 class="heading5">HONEY</h2>
+     <img src="https://img.icons8.com/flat_round/64/000000/five-of-five-stars.png"/>
+      <h4 class="heading6">Healthy Salade for you, With all<br>vegetables and eggs.<br>yummy</h4>
+      </div>
+  </div>
+
+ </div>
+
+ <!--Sixth para-->
+
+ <div class="dec36">
+
+  <h1 class="heading18">Contact Us</h1>
+  <a href="#top"><i class="fas fa-arrow-up fa-4x"></i> </a>
+  <p class="dec37">About Us</p>
+  <p class="dec37 facebook"> <i class="fab fa-facebook-f"></i> Facebook</p>
+  <p class="dec37 address"> <i class="fas fa-map"></i> 123,ABC</p>
+  <p class="dec37">Contact</p>
+  <p class="dec37 twitter"> <i class="fab fa-twitter"></i> Twitter</p>
+  <p class="dec37 gmail"> <i class="fas fa-envelope"></i> ABC@gmail.com</p>
+  <p class="dec37">Terms & Conditions</p>
+  <p class="dec37 insta"> <i class="fab fa-instagram"></i> Instagram</p>
+  <p class="dec37 number"> <i class="fas fa-phone"></i> 987654321</p>
+
+  <div class="dec40">
+    <img class="dec38 extra" src="images/visa1.png" alt="visa">
+    <img class="dec38" src="images/master-card.png" alt="master-card">
+    <img class="dec38" src="images/maestro-card.png" alt="maestro">
+    <img class="dec38" src="images/american-express.jpg" alt="american-express">
+    <div class="dec39 dec41">
+      <h2 class="heading19">subscribe for weekly update</h2>
+      <input class="input" type="text" id="fname" name="fname" placeholder="Email Address">
+      <button class="button1">OK</button>
+    </div>
+  </div>
+
+  <div class="dec42">
+    <img class="dec38 extra" src="images/rupay.png" alt="ru-pay">
+    <img class="dec38" src="images/diners-club.png" alt="diners club">
+    <img class="dec38" src="images/wallets.webp" alt="wallets">
+    <img class="dec38" src="images/internet-banking.png" alt="internet-banking">
+
+    <div class="dec39 dec43">
+      <button class="button2 commonButton"><img src="https://img.icons8.com/color/48/000000/google-play.png"/> GOOGLE PLAY</button>
+      <button class="button3 commonButton"><img src="https://img.icons8.com/officel/48/000000/mac-os.png"/> APP STORE</button>
+     </div>
+   </div> 
+  </div>
+ </div>
+
+</body>
+</html>
